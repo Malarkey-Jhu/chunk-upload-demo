@@ -1,7 +1,16 @@
 
-### 基於 Node(express) 的文件切片上傳 demo
+## 基於 Node(express) 的文件切片上傳 demo
 
 
+### 項目啟動
+啟動命令後，訪問localhost:3000
+```bash
+  npm install // 安裝依賴
+  node server.js
+```
+
+
+### 說明
 - 前端指定 chunkSize 切片大小, 利用 Blob.slice() 切片, 注意上傳切片的idx要一並帶上 (這裡是包含在上傳文件名中blobName中的index)。切片的idx關係到後端合併切片的順序。
     ```js
       let blob = file.slice(start, start + chunkSize);
